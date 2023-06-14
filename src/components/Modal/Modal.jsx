@@ -2,6 +2,7 @@ import React from "react";
 import { EnterForm } from "../EnterForm/EnterForm";
 import "./Modal.css";
 import { AiOutlineClose } from "react-icons/ai";
+import {Link} from "react-router-dom";
 
 export function Modal( { onClose } )  {
     return (
@@ -21,6 +22,10 @@ export function Modal( { onClose } )  {
                     onCreate={onClose}
                     title={"Войдите в свой профиль"}
                 />
+                <div className="modal-links">
+                    <Link to="/password" className="modal-link">Я забыл пароль</Link>
+                    <Link to="/registration" className="modal-link">Регистрация</Link>
+                </div>
             </div>
         </>
     )

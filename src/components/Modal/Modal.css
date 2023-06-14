@@ -44,3 +44,19 @@
     font-size: 30px;
     cursor: pointer;
 }
+
+.modal-links {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.modal-link {
+    text-decoration: none;
+    color: blue;
+}
+
+.modal-link:hover {
+    color: blueviolet;
+}
