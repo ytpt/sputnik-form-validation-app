@@ -1,0 +1,27 @@
+.container {
+    margin: 20% auto;
+    height: auto;
+    text-align: center;
+}
+
+.start-btn {
+    font-family: "Muller Medium", sans-serif;
+    padding: 15px 100px;
+    color: #FFF;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(45deg, rgb(217, 188, 229), rgb(152, 120, 255));
+    background: -moz-linear-gradient(45deg, rgb(217, 188, 229), rgb(152, 120, 255));
+    background: linear-gradient(45deg, rgb(217, 188, 229), rgb(152, 120, 255));
+}
+
+.start-btn:hover {
+   border: 1px solid grey;
+    color: black;
+    transition: 0.2s;
+}
