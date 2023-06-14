@@ -4,7 +4,6 @@ import { Modal } from "../Modal/Modal";
 
 export function StartPage() {
     const [modal, setModal] = useState(false);
-    console.log(modal);
 
     const onClose = () => {
         setModal(false);
