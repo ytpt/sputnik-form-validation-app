@@ -17,13 +17,30 @@
     height: auto;
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 40%;
     transform: translate(-50%, -50%);
     background-color: #FFFFFF;
-    padding: 15px;
+    padding: 5px 10px 15px;
     text-align: left;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
 }
 
 .modal-title > span {
     font-weight: 200;
+}
+
+.modal-close-btn {
+    color: blueviolet;
+    font-size: 30px;
+    cursor: pointer;
 }
