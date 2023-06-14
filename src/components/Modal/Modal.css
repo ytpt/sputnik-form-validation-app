@@ -40,9 +40,15 @@
 }
 
 .modal-close-btn {
-    color: blueviolet;
+    color: blue;
     font-size: 30px;
     cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    color: blueviolet;
+    font-size: 32px;
+    transition: 0.2s;
 }
 
 .modal-links {
