@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./StartPage.css";
-import { Modal } from "../Modal/Modal";
+import { Modal } from "../../components/Modal/Modal";
 
 export function StartPage() {
+
     const [modal, setModal] = useState(false);
 
     const onClose = () => {
@@ -15,10 +16,10 @@ export function StartPage() {
 
     return (
         <div className="container">
-            { modal && <Modal onClose={onClose} /> }
+            { modal && <Modal onClose={ onClose } /> }
             <button
                 className="start-btn"
-                onClick={onOpen}>
+                onClick={ onOpen }>
                 Начать
             </button>
         </div>
