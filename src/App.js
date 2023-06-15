@@ -1,16 +1,22 @@
-import React from "react";
+import React  from "react";
 import { StartPage } from "./pages/StartPage/StartPage";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { RegistrationPage } from "./pages/RegistrationPage";
-import { ForgotPasswordPage } from "./pages/ForgotPasswordPage";
+import { PasswordPage } from "./pages/PasswordPage";
 
 function App() {
+
+    const navigate = useNavigate();
+    const handleModalBgClick = () => {
+        navigate(-1);
+    };
+
   return (
       <div className="App">
           <Routes>
-              <Route path="/" element={ <StartPage /> } />
-              <Route path="/password" element={ <ForgotPasswordPage /> } />
-              <Route path="/registration" element={ <RegistrationPage /> } />
+              <Route exact path="/" element={ <StartPage /> } />
+              <Route path="/password" element={ <PasswordPage handleModalBgClick={ handleModalBgClick } /> } />
+              <Route path="/registration" element={ <RegistrationPage handleModalBgClick={ handleModalBgClick } /> } />
           </Routes>
       </div>
   );
