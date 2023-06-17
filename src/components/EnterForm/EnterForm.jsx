@@ -4,37 +4,25 @@ import { Formik, Form, Field } from "formik";
 import "./EnterForm.css";
 import "../Controls/Controls.css";
 import { validationSchema } from "../ValidationSchema";
+// import axios from 'axios';
 
 export function EnterForm() {
 
     const [isAuth, setIsAuth] = useState(false);
+    const [data, setData] = useState({});
 
-    const handleSubmit = async (values) => {
+    const handleSubmit = (values) => {
         console.log(values);
 
-        //Отправка данных на сервер
+        // Авторизация пользователя
 
-        // Установить через терминал: npm i --save axios
-        // Создать компонент в папке: axios/index.js
-        // Код компонента:
-        // import axios from "axios";
-        // export const instance = axios.create({
-        //     baseURL: 'url',
-        //     timeout: 1000,
-        //     headers: {"X-Custom-Header": "foobar"}
-        // })
-        // const userData = {
-        //     values.email,
-        //     values.password
-        // }
-
-        //Код функции handleSubmit:
-        // const user = await instance.post(`${url}`, userData));
-        //метод try catch
-        // if (response.ok) {
-        // setIsAuth(true);
-        // }
-
+        // const formData = new FormData(values);
+        // axios.post('API_URL', formData)
+        //     .then((response) => {
+        //         setData(response.data);
+        //         setIsAuth(true);
+        //     });
+        // };
     }
 
     return (
