@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.start-btn {
+.controls-btn {
     font-family: "Muller Medium", sans-serif;
     max-height: 47px;
     padding: 15px 100px;
@@ -27,7 +27,7 @@
     background: linear-gradient(45deg, rgb(217, 188, 229), rgb(152, 120, 255));
 }
 
-.start-btn:hover {
+.controls-btn:hover {
     border: 1px solid grey;
     color: black;
     transition: 0.2s;

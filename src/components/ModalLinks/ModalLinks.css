@@ -1,0 +1,36 @@
+.modal-links {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.modal-links__link {
+    width: fit-content;
+    text-decoration: none;
+    color: blue;
+
+}
+
+.modal-links__link:hover {
+    color: blueviolet;
+}
+
+.modal-support {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+    margin-top: 150px;
+    color: darkgrey;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal-support:hover {
+    color: grey;
+}
+
+.modal-support__text {
+    margin: 0;
+}

@@ -3,8 +3,6 @@ import "./ErrorMessage.css";
 
 export function ErrorMessage({ error }) {
     return (
-        <p className="error-message">
-            {error}
-        </p>
+        <p className="error-message">{ error }</p>
     )
 }

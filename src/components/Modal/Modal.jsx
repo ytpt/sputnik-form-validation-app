@@ -1,37 +1,29 @@
-import React from "react";
-import { EnterForm } from "../EnterForm/EnterForm";
+import React, { useContext } from "react";
 import "./Modal.css";
-import { AiOutlineClose, AiOutlineMail } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { AiOutlineClose } from "react-icons/ai";
+import { ModalContext } from "../../context/ModalContext";
 
-export function Modal({ onClose })  {
+export function Modal(props)  {
+
+    const { children, title } = props;
+    const { closeModal } = useContext(ModalContext);
+
+    const handleClose = () => {
+        const closeTimeout = setTimeout(() => {
+            closeModal();
+            clearTimeout(closeTimeout);
+        }, 0.2);
+    }
+
     return (
         <>
-            <div className="modal-bg" onClick={ onClose } />
-            <div className="modal">
+            <div className="modal-bg" onClick={ handleClose } />
+            <div className="modal" onClick={ (event) => event.stopPropagation() }>
                 <div className="modal-header">
-                    <h1 className="modal-header__title">
-                        Web <span>App</span>
-                    </h1>
-                    <AiOutlineClose className="modal-header__btn" onClick={ onClose } />
+                    <h1 className="modal-header__title">{ title }</h1>
+                    <AiOutlineClose className="modal-header__btn" onClick={ handleClose } />
                 </div>
-                <EnterForm onCreate={ onClose } title={ "Войдите в свой профиль" } />
-                <div className="modal-links">
-                    <Link
-                        to="/password"
-                        className="modal-links__link">
-                        Я забыл пароль
-                    </Link>
-                    <Link
-                        to="/registration"
-                        className="modal-links__link">
-                        Регистрация
-                    </Link>
-                </div>
-                <div className="modal-support">
-                    <AiOutlineMail className="modal-support__icon" />
-                    <p className="modal-support__text">Написать в поддержку</p>
-                </div>
+                <div className="modal-body">{ children }</div>
             </div>
         </>
     )
