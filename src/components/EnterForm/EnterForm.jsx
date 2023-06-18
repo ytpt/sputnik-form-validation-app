@@ -15,7 +15,7 @@ export function EnterForm() {
 
     const openSuccessModal = (userDataArg) => {
         openModal({
-            title: `Пользователь: ${userDataArg.email}`,
+            title: `Привет, ${userDataArg.email}!`,
             children: <Profile key="profile" userData={ userDataArg } />
         })
     }
