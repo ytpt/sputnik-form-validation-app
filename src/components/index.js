@@ -1,2 +1,2 @@
-export * from "./Controls";
+export * from "./StartPage";
 export * from "./Modal";
