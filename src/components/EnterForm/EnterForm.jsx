@@ -1,27 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { ErrorMessage } from "../ErrorMessage/ErrorMessage";
 import { Formik, Form, Field } from "formik";
 import "./EnterForm.css";
-import "../Controls/Controls.css";
+import "../StartPage/StartPage.css";
 import { validationSchema } from "../ValidationSchema";
+import { ModalContext } from "../../context/ModalContext";
+import { Profile } from "../Profile";
 // import axios from 'axios';
 
 export function EnterForm() {
 
-    const [isAuth, setIsAuth] = useState(false);
-    const [data, setData] = useState({});
+    // const [isAuth, setIsAuth] = useState(false);
+    const { openModal } = useContext(ModalContext);
+
+    const openSuccessModal = (userDataArg) => {
+        openModal({
+            title: `Пользователь: ${userDataArg.email}`,
+            children: <Profile key="profile" userData={ userDataArg } />
+        })
+    }
 
     const handleSubmit = (values) => {
-        console.log(values);
-
         // Авторизация пользователя
 
-        // const formData = new FormData(values);
-        // axios.post('API_URL', formData)
-        //     .then((response) => {
-        //         setData(response.data);
-        //         setIsAuth(true);
-        //     });
+        // axios.post("API_TOKEN", values)
+        //     .then(response => {
+        //     if (response.ok) {
+        //     setIsAuth(true);
+                openSuccessModal(values);
+        //     }
+        //     .catch(err) => console.log(err)
         // };
     }
 
