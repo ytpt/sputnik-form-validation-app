@@ -34,3 +34,10 @@
 .modal-support__text {
     margin: 0;
 }
+
+.modal-links__text {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    align-items: center;
+}
