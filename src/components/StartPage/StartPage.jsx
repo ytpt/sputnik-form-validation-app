@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import "./Controls.css";
+import "./StartPage.css";
 import { ModalContext } from "../../context";
 import { EnterForm } from "../EnterForm/EnterForm";
 import { ModalLinks } from "../ModalLinks/ModalLinks";
 
-export const Controls = () => {
+export const StartPage = () => {
 
     const { openModal } = useContext(ModalContext);
 
