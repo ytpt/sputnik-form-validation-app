@@ -1,11 +1,11 @@
 import React  from "react";
-import { Controls } from "./components/Controls";
+import { StartPage } from "./components/StartPage";
 
 function App() {
 
   return (
       <div className="App">
-          <Controls />
+          <StartPage />
       </div>
   );
 }
