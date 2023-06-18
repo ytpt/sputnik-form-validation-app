@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Before using the app
+
+1) Set the API url in the .env.example file
+
+2) Install axios library by terminal 
+    ### `npm install axios`
+
+3) Make all comments visible in EnterForm.jsx file
+
 ## Available Scripts
 
 In the project directory, you can run:
