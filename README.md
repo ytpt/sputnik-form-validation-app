@@ -1,26 +1,13 @@
 # Getting Started
 
-In the terminal, you can run: 
+You can run: 
 ### `npm i sputnik-form-validation-app`
 
 
-## Install dependencies
+## Install libraries
 
-To run the app you should install following libraries:
-<ul>
-    <li>Formik</li>
-    <li>Yup</li>
-    <li>react-dom</li>
-    <li>react-scripts</li>
-    <li>react-icons</li>
-</ul>
-
-In the terminal, you can run: 
-### `npm i formik --save`
-### `npm i --save yup`
-### `npm i react-dom`
-### `npm i react-scripts`
-### `npm i react-icons`
+To install libraries run:
+### `npm install`
 
 
 ## Set api url (optional)
